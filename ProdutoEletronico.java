@@ -18,7 +18,7 @@ public class ProdutoEletronico extends Produto{
     public static ProdutoEletronico[] adicionarProdutoEletronico(int n) { 
         Scanner scanner = new Scanner(System.in);
         ProdutoEletronico[] eletronico = new ProdutoEletronico[n];
-
+        
         for (int i = 0; i < n; i++) {
             eletronico[i] = new ProdutoEletronico(); 
 
@@ -38,7 +38,7 @@ public class ProdutoEletronico extends Produto{
                                  
             scanner.nextLine(); 
             
-            scanner.close();
+            
         }
         return eletronico;
     }

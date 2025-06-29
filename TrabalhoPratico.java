@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-
-
 public class TrabalhoPratico {
 
     public static void main(String[] args) {
@@ -38,13 +36,14 @@ public class TrabalhoPratico {
                         break;
                     case 3:
                         System.out.println("Produtos eletronicos:");
-                        for(int i = 0; i < 10; i++){
+                        
+                        for(int i = 0; i < 2; i++){
                             System.out.println(produtosEletronicos[i].toString());
                         }
-                        System.out.println("Produtos alimenticios:");
-                        for(int i = 0; i < 10; i++){
-                            System.out.println(produtosAlimenticios[i].toString());
-                        }
+                        // System.out.println("Produtos alimenticios:");
+                        // for(int i = 0; i < 10; i++){
+                        //     System.out.println(produtosAlimenticios[i].toString());
+                        // }
     //                case 4 -> System.out.println("Realizando Venda");
     //                case 5 -> System.out.println("Produto");
     //                case 6 -> System.out.println("Vendas realizadas: ");
