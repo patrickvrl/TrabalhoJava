@@ -59,11 +59,25 @@ public class TrabalhoPratico {
                             }
                         }
                         break;
-                    case 4:
-                        
+                        case 4:
+                        if (produtosEletronicos.isEmpty()) {
+                            System.out.println("Não há produtos eletrônicos em estoque para vender.");
+                        } else {
+                            System.out.print("Digite o código do produto eletrônico a ser vendido: ");
+                            int codigoVenda = scanner.nextInt();
+                            Venda.venderProdutoEletronico(codigoVenda, produtosEletronicos);
+                        }
                         break;
                     
-    //                case 5 -> System.out.println("Produto");
+                    case 5: 
+                        if (produtosAlimenticios.isEmpty()) {
+                        System.out.println("Não há produtos alimentícios em estoque para vender.");
+                    } else {
+                        System.out.print("Digite o código do produto alimentício a ser vendido: ");
+                        int codigoVenda = scanner.nextInt();
+                        Venda.venderProdutoAlimenticio(codigoVenda, produtosAlimenticios);
+                    }
+                    break;
     //                case 6 -> System.out.println("Vendas realizadas: ");
                     case 0:
                     break;

@@ -19,11 +19,11 @@ public class ProdutoEletronico extends Produto{
     public static void adicionarProdutoEletronico(int n,  ArrayList<ProdutoEletronico> eletronico) { 
         Scanner scanner = new Scanner(System.in);
         //ArrayList<ProdutoEletronico> eletronico = new ArrayList<>();
-        ProdutoEletronico prod = new ProdutoEletronico();
         
+
         for (int i = 0; i < n; i++) {
             System.out.println("\nProduto " + (i + 1));
-            
+            ProdutoEletronico prod = new ProdutoEletronico();
             System.out.print("Nome do produto: ");
             prod.setNome(scanner.nextLine());
 
@@ -40,6 +40,6 @@ public class ProdutoEletronico extends Produto{
             
             
         }
-        //return eletronico;
+       
     }
 }
