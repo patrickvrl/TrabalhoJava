@@ -1,5 +1,6 @@
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class ProdutoEletronico extends Produto{
     private int garantia;
@@ -15,31 +16,30 @@ public class ProdutoEletronico extends Produto{
 }
     
     
-    public static ProdutoEletronico[] adicionarProdutoEletronico(int n) { 
+    public static void adicionarProdutoEletronico(int n,  ArrayList<ProdutoEletronico> eletronico) { 
         Scanner scanner = new Scanner(System.in);
-        ProdutoEletronico[] eletronico = new ProdutoEletronico[n];
+        //ArrayList<ProdutoEletronico> eletronico = new ArrayList<>();
+        ProdutoEletronico prod = new ProdutoEletronico();
         
         for (int i = 0; i < n; i++) {
-            eletronico[i] = new ProdutoEletronico(); 
-
             System.out.println("\nProduto " + (i + 1));
-
+            
             System.out.print("Nome do produto: ");
-            eletronico[i].setNome(scanner.nextLine());
+            prod.setNome(scanner.nextLine());
 
             System.out.print("Preco: ");
-            eletronico[i].setPreco(scanner.nextFloat());
+            prod.setPreco(scanner.nextFloat());
             
             System.out.print("Codigo: ");
-            eletronico[i].setCodigo(scanner.nextInt());
+            prod.setCodigo(scanner.nextInt());
             
             System.out.print("Garantia em meses: ");
-            eletronico[i].setGarantia(scanner.nextInt());
-                                 
+            prod.setGarantia(scanner.nextInt());
+            eletronico.add(prod);
             scanner.nextLine(); 
             
             
         }
-        return eletronico;
+        //return eletronico;
     }
 }

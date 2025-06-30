@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class ProdutoAlimenticio extends Produto{
     String validade;
@@ -14,32 +15,30 @@ public class ProdutoAlimenticio extends Produto{
 }
     
     
-    public static ProdutoAlimenticio[] adicionarProdutoAlimenticio(int n) { 
+    public static void adicionarProdutoAlimenticio(int n, ArrayList<ProdutoAlimenticio> alimento) { 
         Scanner scanner = new Scanner(System.in);
-        ProdutoAlimenticio[] alimento = new ProdutoAlimenticio[n];
-
+        //ArrayList<ProdutoAlimenticio> alimento = new ArrayList<>();
+        
+        ProdutoAlimenticio prod = new ProdutoAlimenticio();
         for (int i = 0; i < n; i++) {
-            alimento[i] = new ProdutoAlimenticio();
-
             System.out.println("\nProduto " + (i + 1));
 
             System.out.print("Nome do produto: ");
-            alimento[i].setNome(scanner.nextLine());
+            prod.setNome(scanner.nextLine());
 
             System.out.print("Preco: ");
-            alimento[i].setPreco(scanner.nextFloat());
+            prod.setPreco(scanner.nextFloat());
             
             System.out.print("Codigo: ");
-            alimento[i].setCodigo(scanner.nextInt());
+            prod.setCodigo(scanner.nextInt());
             
             System.out.print("Data de vencimento ");
-            alimento[i].setValidade(scanner.nextLine());
-                                 
-            scanner.nextLine(); 
+            prod.setValidade(scanner.nextLine());
+            alimento.add(prod);
+            scanner.nextLine();
             
-            scanner.close();
+            
         }
-        return alimento;
     }
 }
 
