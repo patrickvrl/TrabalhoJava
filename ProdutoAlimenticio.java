@@ -19,8 +19,9 @@ public class ProdutoAlimenticio extends Produto{
         Scanner scanner = new Scanner(System.in);
         //ArrayList<ProdutoAlimenticio> alimento = new ArrayList<>();
         
-        ProdutoAlimenticio prod = new ProdutoAlimenticio();
+        
         for (int i = 0; i < n; i++) {
+            ProdutoAlimenticio prod = new ProdutoAlimenticio();
             System.out.println("\nProduto " + (i + 1));
 
             System.out.print("Nome do produto: ");
