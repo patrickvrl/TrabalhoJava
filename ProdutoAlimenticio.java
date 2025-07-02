@@ -32,11 +32,13 @@ public class ProdutoAlimenticio extends Produto{
             
             System.out.print("Codigo: ");
             prod.setCodigo(scanner.nextInt());
-            
-            System.out.print("Data de vencimento ");
+
+            scanner.nextLine();
+
+            System.out.println("Data de vencimento: ");
             prod.setValidade(scanner.nextLine());
             alimento.add(prod);
-            scanner.nextLine();
+            
             
             
         }

@@ -1,7 +1,29 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+
 public class TrabalhoPratico {
+      public static void buscarProdutoPorNome(ArrayList<ProdutoEletronico> eletronicos, ArrayList<ProdutoAlimenticio> alimenticios, String nomeBusca) {
+        boolean encontrado = false;
+
+        for (ProdutoEletronico p : eletronicos) {
+            if (p.getNome().equalsIgnoreCase(nomeBusca)) {
+                System.out.println("Produto eletrônico encontrado: " + p);
+                encontrado = true;
+            }
+        }
+
+        for (ProdutoAlimenticio p : alimenticios) {
+            if (p.getNome().equalsIgnoreCase(nomeBusca)) {
+                System.out.println("Produto alimentício encontrado: " + p);
+                encontrado = true;
+            }
+        }
+
+        if (!encontrado) {
+            System.out.println("Produto não encontrado.");
+        }
+    }
 
     public static void main(String[] args) {
         ArrayList<ProdutoEletronico> produtosEletronicos = new ArrayList<ProdutoEletronico>();
@@ -77,9 +99,16 @@ public class TrabalhoPratico {
                         int codigoVenda = scanner.nextInt();
                         Venda.venderProdutoAlimenticio(codigoVenda, produtosAlimenticios);
                     }
-                    break;
+                        break;
                     case 6:
                         Venda.listarVendas();
+                        break;
+                    case 7:
+                        scanner.nextLine();
+                        System.out.print("Digite o nome do produto que deseja buscar: ");
+                        String nomeBusca = scanner.nextLine();
+                        buscarProdutoPorNome(produtosEletronicos, produtosAlimenticios, nomeBusca);
+                        break;
                     case 0:
                     break;
                     default: System.out.println("Opção inválida.");
