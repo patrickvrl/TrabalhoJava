@@ -78,7 +78,8 @@ public class TrabalhoPratico {
                         Venda.venderProdutoAlimenticio(codigoVenda, produtosAlimenticios);
                     }
                     break;
-    //                case 6 -> System.out.println("Vendas realizadas: ");
+                    case 6:
+                        Venda.listarVendas();
                     case 0:
                     break;
                     default: System.out.println("Opção inválida.");
